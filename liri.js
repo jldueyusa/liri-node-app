@@ -7,7 +7,7 @@ let moment = require('moment');
 let fs = require('fs');
 
 //import from keys
-let keys = require ('keys.js');
+let keys = require('keys.js');
 let spotify2 = new Spotify(keys.Spotify);
 
 //command line arguments
@@ -25,25 +25,29 @@ let input = process.argv[3];
 //movie-this
 //do-what-it-says
 
-switch(command){
+switch (command) {
     case 'concert-this':
 
-    console.log("concert command test");
-break;
 
-case 'spotify-this-song':
+        console.log("concert command test");
+        break;
 
-    console.log("spotify command test");
-break;
+    case 'spotify-this-song':
 
-case 'movie-this':
 
-    console.log("movie command test");
-break;
+        console.log("spotify command test");
+        break;
 
-case 'do-what-it-says':
+    case 'movie-this':
 
-    console.log("filesystem command test");
-break;
+
+        console.log("movie command test");
+        break;
+
+    case 'do-what-it-says':
+
+
+        console.log("filesystem command test");
+        break;
 
 }
