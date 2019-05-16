@@ -64,8 +64,8 @@ switch (command) {
             "---------------------",
             "Artist: " + data.artists[0].name,
             "\nSong: " + input,
-            "\Spotify Link: " + data.artists[0].external_urls.spotify,
-            "n\Album: " + data.name,
+            "\nSpotify Link: " + data.artists[0].external_urls.spotify,
+            "\nAlbum: " + data.name,
             "---------------------",
         ].join("\n\n");
 
@@ -121,8 +121,8 @@ switch (command) {
                 "---------------------",
                 "Artist: " + data.artists[0].name,
                 "\nSong: " + choice[1],
-                "\Spotify Link: " + data.artists[0].external_urls.spotify,
-                "n\Album: " + data.name,
+                "\nSpotify Link: " + data.artists[0].external_urls.spotify,
+                "\nAlbum: " + data.name,
                 "---------------------",
             ].join("\n\n");
     
@@ -136,7 +136,7 @@ switch (command) {
     })
 
 
-    console.log("filesystem command test");
+    //console.log("filesystem command test");
     break;
 
     default:
