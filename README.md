@@ -9,7 +9,11 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI is a command
 -	movie-this
 -	do-what-it-says
 
-# Instructions for the Liri app
+# Instructions for the Liri App
+
+View a play by play instructional video by clicking the link below
+
+[Click Here](https://drive.google.com/file/d/1Mpz2VLzLgLR7AjWp1vFDwfnoMIW8NHKm/view)
 
 1. In order to run Liri you have to use the terminal. You can do this by opening the terminal on a Mac, Bash on a PC, or if in VS right click on the file and select 'open in terminal' 
 2. Inside the terminal, navigate to the liri.js file 
@@ -50,6 +54,18 @@ node liri.js do-what-it-says
 Once you hit enter, your output would look something like this
 
 ![do what it says](https://github.com/jldueyusa/liri-node-app/blob/master/images/do_what_it_says.png)
+
+
+# Tools and Applications
+- Javascript
+- Node.js
+- Node packages
+  - Axios
+  - Node-Spotify-Api
+  - Moment
+  - DotEnv
+- OMDb API
+- Bands In Town
 
 
 
