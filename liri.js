@@ -1,5 +1,5 @@
 //requirements
-
+//require("dotenv").config();
 let axios = require("axios");
 let Spotify = require("node-spotify-api");
 let dotenv = require('dotenv').config();
@@ -42,6 +42,7 @@ switch (command) {
             "\nVenue: " + data.venue.name,
             "\nLocation: " + data.venue.city + ", " + data.venue.region,
             "\nDate: " + moment(data.datetime).format("MM/DD/YYYY"),
+            "---------------------",
 
         ].join("\n");
         console.log(concertData);
@@ -55,6 +56,24 @@ switch (command) {
     break;
 
     case 'spotify-this-song':
+    spotify.search({ type: 'track' , query: input })
+    .then(function(response){
+        let data = response.tracks.items[0].album;
+
+        let songData = [
+            "---------------------",
+            "Artist: " + data.artists[0].name,
+            "\nSong: " + input,
+            "\Spotify Link: " + data.artists[0].external_urls.spotify,
+            "n\Album: " + data.name,
+            "---------------------",
+        ].join("\n\n");
+
+        console.log(songData)
+    })
+    .catch(function(err){
+        console.log(err);
+    });
 
 
     console.log("spotify command test");
@@ -79,14 +98,41 @@ switch (command) {
     break;
 
     case 'do-what-it-says':
-    fs.readfile("random.txt", "UTF-8", function(error, data){
-        if(error){
-            console.log("Error: " + error);
-        } else{
+    fs.readFile("random.txt", "utf-8", function(error, data){
+        // if(error){
+        //     console.log("Error: " + error);
+        // } 
+
             let choice = data.split(",");
-            console.log(choice[1]);
+
+            // console.log(choice);
             //run through spotify
+          if(choice.length === 2){;
+            //   console.log(choice[0]);
+          }
+        else if(choice === 1){
+            console.log(choice[0]);
         }
+        spotify.search({ type: 'track' , query: choice[1] })
+        .then(function(response){
+            let data = response.tracks.items[0].album;
+    
+            let songData = [
+                "---------------------",
+                "Artist: " + data.artists[0].name,
+                "\nSong: " + choice[1],
+                "\Spotify Link: " + data.artists[0].external_urls.spotify,
+                "n\Album: " + data.name,
+                "---------------------",
+            ].join("\n\n");
+    
+            console.log(songData)
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+
+
     })
 
 
