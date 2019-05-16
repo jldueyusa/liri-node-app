@@ -22,4 +22,6 @@ node liri.js concert-this 'artist name'
 
 Once you hit enter, your output would look something like this
 
-![Image of concert_this](//octodex.github.com/images/yaktocat.png)
+![conert this](https://github.com/jldueyusa/liri-node-app/blob/master/images/concert_this.png)
+
+
